@@ -1,0 +1,29 @@
+name: Deploy to Railway
+
+on:
+  push:
+    branches: 
+      - v[0-9]+.[0-9]+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release.tar.gz,foo/*.txt"
+           bodyFile: "body.md"
+           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+        
+      
+#       - name: Install Railway
+#         run: npm i -g @railway/cli
+
+#       - name: Deploy
+#         run: railway up
+#         env:
+#           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
