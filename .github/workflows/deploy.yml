@@ -60,7 +60,7 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Deployment:*\n railway link here"
+                      "text": "*Deployment:*\n ${{ secrets.RAILWAY_APP_URL }}"
                     }
                   ]
                 }
