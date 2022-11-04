@@ -60,7 +60,7 @@ jobs:
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment:*\n ${{ secrets.RAILWAY_APP }}"
+                        "text": "*Deployment:*\n https://dipsa-production.up.railway.app"
                       },
                   ]
                 },
@@ -68,7 +68,7 @@ jobs:
                   "type": "section",
                   "text": {
                         "type": "mrkdwn",
-                        "text": "*<${{ secrets.RAILWAY_APP }}| Open Application>*" 
+                        "text": "*<https://dipsa-production.up.railway.app/>| Open Application>*" 
                       }
                 }      
               ]
