@@ -63,16 +63,16 @@ jobs:
                                 "text":"*Deployment:*\n https://dipsa-production.up.railway.app"
                             }
                         ]
-                    },
+                    }
                 ]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK_TEST }}
       
-#       - name: Install Railway
-#         run: npm i -g @railway/cli
+      - name: Install Railway
+        run: npm i -g @railway/cli
 
-#       - name: Deploy
-#         run: railway up
-#         env:
-#           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
