@@ -56,11 +56,11 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Repository:*\n {{ github.repositoryUrl }}"
+                      "text": "*Repository:*\n ${{ github.repositoryUrl }}"
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Deployment:*\n {{ secrets.RAILWAY_APP_URL }}"
+                      "text": "*Deployment:*\n ${{ secrets.RAILWAY_APP_URL }}"
                     }
                   ]
                 }
