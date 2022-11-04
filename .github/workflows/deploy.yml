@@ -19,15 +19,55 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
           body: |
-            Changes in this Release
-            - First Change
-            - Second Change
+            DipSA realse 
           draft: false
           prerelease: false
-    
+      - name: Send GitHub Action trigger data to Slack workflow
+        id: slack
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          payload: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*DipSA55 CI/CD Assignment Submission*"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Name:*\n Liu Lihu"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Metriculation:*\n A0265077"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Email:*\n E1045748@u.nus.edu"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Repository:*\n {{ github.repositoryUrl }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Deployment:*\n {{ secrets.RAILWAY_APP_URL }}"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK_TEST }}
       
 #       - name: Install Railway
 #         run: npm i -g @railway/cli
