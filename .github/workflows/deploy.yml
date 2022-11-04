@@ -31,47 +31,47 @@ jobs:
         with:
           payload: |
             {
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*DipSA55 CI/CD Assignment Submission*"
-                  }
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Name:*\n Liu Lihu"
-                      },
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Metriculation:*\n A0265077"
-                      },
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Email:*\n E1045748@u.nus.edu"
-                      },
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Repository:*\n ${{ github.repositoryUrl }}"
-                      },
-                      {
-                        "type": "mrkdwn",
-                        "text": "*Deployment:*\n https://dipsa-production.up.railway.app"
-                      },
-                  ]
-                },
-                {
-                  "type": "section",
-                  "text": {
-                        "type": "mrkdwn",
-                        "text": "*<https://dipsa-production.up.railway.app/>| Open Application>*" 
-                      }
-                }      
-              ]
+                "blocks":[
+                    {
+                        "type":"section",
+                        "text":{
+                            "type":"mrkdwn",
+                            "text":"*DipSA55 CI/CD Assignment Submission*"
+                        }
+                    },
+                    {
+                        "type":"section",
+                        "fields":[
+                            {
+                                "type":"mrkdwn",
+                                "text":"*Name:*\n Liu Lihu"
+                            },
+                            {
+                                "type":"mrkdwn",
+                                "text":"*Metriculation:*\n A0265077"
+                            },
+                            {
+                                "type":"mrkdwn",
+                                "text":"*Email:*\n E1045748@u.nus.edu"
+                            },
+                            {
+                                "type":"mrkdwn",
+                                "text":"*Repository:*\n ${{ github.repositoryUrl }}"
+                            },
+                            {
+                                "type":"mrkdwn",
+                                "text":"*Deployment:*\n https://dipsa-production.up.railway.app"
+                            }
+                        ]
+                    },
+                    {
+                        "type":"section",
+                        "text":{
+                            "type":"mrkdwn",
+                            "text":"*<https://dipsa-production.up.railway.app/| Open Application>*"
+                        }
+                    }
+                ]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK_TEST }}
