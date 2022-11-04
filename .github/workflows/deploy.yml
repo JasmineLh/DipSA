@@ -42,28 +42,35 @@ jobs:
                 {
                   "type": "section",
                   "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Name:*\n Liu Lihu"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Metriculation:*\n A0265077"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Email:*\n E1045748@u.nus.edu"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Repository:*\n ${{ github.repositoryUrl }}"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Deployment:*\n ${{ secrets.RAILWAY_APP }}"
-                    }
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Name:*\n Liu Lihu"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Metriculation:*\n A0265077"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Email:*\n E1045748@u.nus.edu"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Repository:*\n ${{ github.repositoryUrl }}"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Deployment:*\n ${{ secrets.RAILWAY_APP }}"
+                      },
                   ]
-                }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                        "type": "mrkdwn",
+                        "text": "*<${{ secrets.RAILWAY_APP }}| Open Application>*" 
+                      }
+                }      
               ]
             }
         env:
