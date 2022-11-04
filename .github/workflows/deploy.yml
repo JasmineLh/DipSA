@@ -64,13 +64,6 @@ jobs:
                             }
                         ]
                     },
-                    {
-                        "type":"section",
-                        "text":{
-                            "type":"mrkdwn",
-                            "text":"*<https://dipsa-production.up.railway.app/| Open Application>*"
-                        }
-                    }
                 ]
             }
         env:
