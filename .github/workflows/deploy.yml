@@ -36,10 +36,7 @@ jobs:
               "blocks":[
                   {
                       "type":"section",
-                      "text":{
-                          "type":"mrkdwn",
-                          "text":"*DipSA55 CI/CD Assignment Submission*"
-                      }
+                      "text":"DipSA55 CI/CD Assignment Submission"
                   }
               ]
             }
