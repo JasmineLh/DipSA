@@ -37,10 +37,7 @@ jobs:
                "blocks": [
                 {
                   "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "GitHub Action build result"
-                  }
+                  "text": "GitHub Action build result"
                 }
               ]
             }
