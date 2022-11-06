@@ -58,11 +58,11 @@ jobs:
                         },
                         {
                             "type":"mrkdwn",
-                            "text":"*Repository:*\n git://github.com/JasmineLh/DipSA.git"
+                            "text":"*Repository:*\n ${{ github.repositoryUrl }}"
                         },
                         {
                             "type":"mrkdwn",
-                            "text":"*Deployment:*\n https://dipsa-production.up.railway.app"
+                            "text":"*Deployment:*\n ${{ secrets.RAILWAY_APP }}"
                         }
                     ]
                 },
@@ -70,7 +70,7 @@ jobs:
                     "type":"section",
                     "text":{
                         "type":"mrkdwn",
-                        "text":"*<https://dipsa-production.up.railway.app/| Open Application>*"
+                        "text":"*${{ secrets.RAILWAY_APP }}| Open Application>*"
                     }
                 }
               ]
