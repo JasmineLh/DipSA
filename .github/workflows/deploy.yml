@@ -77,7 +77,7 @@ jobs:
             }
 
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK_TEST }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
       
       - name: Install Railway
