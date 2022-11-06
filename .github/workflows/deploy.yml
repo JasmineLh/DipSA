@@ -30,18 +30,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          payload: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "New Paid Time Off request from <example.com|Fred Enriquez>\n\n<https://example.com|View request>"
-                  }
-                }
-              ]
-            }
+          args: '{\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Pull Request:*\"}}]}'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK_TEST }}
       
