@@ -46,7 +46,7 @@ jobs:
                     "fields":[
                         {
                             "type":"mrkdwn",
-                            "text":"*Name:*\n Liu Lihu"
+                            "text":"*Name:*\n LIU LIHUA"
                         },
                         {
                             "type":"mrkdwn",
