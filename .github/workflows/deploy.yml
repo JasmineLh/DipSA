@@ -33,12 +33,8 @@ jobs:
           # This data can be any valid JSON from a previous step in the GitHub Action
           payload: |
             {
-              "text": {
-                "type": "mrkdwn",
-                "text": "*This is test*"
-              },
+              "text": "Sample",
               "blocks": [
-
                 {
                   "type": "section",
                   "text": {
