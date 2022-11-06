@@ -32,11 +32,12 @@ jobs:
         with:
           payload: |
             {
-              "blocks":[
-              {
-                  "type":"section",
-                  "text": "*DipSA55 CI/CD Assignment Submission*"
-              },
+                "blocks":[
+                    {
+                        "type":"section",
+                        "text":"*DipSA55 CI/CD Assignment Submission*"
+                    }
+                ]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_HOOK_TEST }}
