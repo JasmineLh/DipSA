@@ -7,6 +7,7 @@ on:
 
 jobs:
   deploy:
+    if: "!contains(github.event.head_commit.message, '#NORUN')"
     runs-on: ubuntu-latest
 
     steps:
@@ -57,7 +58,7 @@ jobs:
                         },
                         {
                             "type":"mrkdwn",
-                            "text":"*Repository:*\n ${{ github.repository	}}"
+                            "text":"*Repository:*\n ${{ github.repositoryUrl }}"
                         },
                         {
                             "type":"mrkdwn",
