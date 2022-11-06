@@ -1,0 +1,9 @@
+"blocks": [
+  {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "GitHub Action build result1: success\nhttps://github.com/JasmineLh/DipSA/commit/749454e7ff9c89f03237b7c30ea490c988d2a2e6"
+    }
+  }
+]
